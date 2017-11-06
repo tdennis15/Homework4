@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Page3";
+}
+<div class="jumbotron">
+    <h1>Amortization made easy</h1>
+    <p>Short loan calculator.</p>
+</div>
+
+<p>In the interest of avoiding self insanity I hope to avoid making a full table and spread sheet representation.</p>
+
+<form method="post" action="Page3">
+    <label for="amount">Loan Size</label>
+    <input type="number" step="10000" name="amount" min="10000" max="5000000" value="10000"/>
+    <br />
+    <br />
+    <label for="payment">Down Payment</label>
+    <input type="number" step="5000" name="payment" min="5000" max="1000000" value="5000" />
+    <br />
+    <br />
+    <label for="rate">Interest Rate</label>
+    <input type="number" step=".01" name="rate" min="1.75" max="7.5" value="3.75" />
+    <br />
+    <br />
+    <label for="years">Length of Loan</label>
+    <input type="number" step="5" name="years" min="5" max="30" value="5"/>
+    <br />
+    <br />
+    <input type="submit" name="submit" value="Yatzee!" />
+
+</form>
+
+<p>
+    @ViewBag.Message
+    Loan Documentation : @ViewBag.Loan
+    <br />
+    <br />
+    Monthly payment plan : @ViewBag.MonthlyPayment
+    <br />
+    <br />
+    Total Payments : @ViewBag.TotalPayment
+
+</p>

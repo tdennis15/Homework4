@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Page1";
+}
+<div class="jumbotron">
+    <h1>Grade Calculator</h1>
+</div>
+
+
+<p>
+    Simple conversion of a grade. Gives the decimal output of any input out of total possible.
+</p>
+
+<!--Basic form that will take 2 inputs and return the division of the second with the first-->
+<form method="get" action="Page1">
+    <label for="score1">Score</label><br />
+    <input type="number" name="score1"  min="0" max="100" value= 0/>
+    <br />
+    <br />
+    <label for="score2">Total Possible</label><br />
+    <input type="number" name="score2"  min="1" max="100" value=1/>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+<br />
+<br />
+<!--Gets the answer from the viewbag.-->
+<p>
+    <em>Your Grade:</em> @ViewBag.Message
+</p>
